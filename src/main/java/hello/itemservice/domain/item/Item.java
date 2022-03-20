@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class Item {
 
-    private Long id;
+    private Long itemId;
     private String itemName;
     private Integer price;
     private Integer quantity;

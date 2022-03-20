@@ -14,8 +14,8 @@ public class ItemRepository {
     private static long sequence = 0L; //static
 
     public Item save(Item item) {
-        item.setId(++sequence);
-        store.put(item.getId(), item);
+        item.setItemId(++sequence);
+        store.put(item.getItemId(), item);
         return item;
     }
 
@@ -32,6 +32,11 @@ public class ItemRepository {
         findItem.setItemName(updateParam.getItemName());
         findItem.setPrice(updateParam.getPrice());
         findItem.setQuantity(updateParam.getQuantity());
+        findItem.setOpen(updateParam.getOpen());
+        findItem.setRegions(updateParam.getRegions());
+        findItem.setItemType(updateParam.getItemType());
+        findItem.setDeliveryCode(updateParam.getDeliveryCode());
+
     }
 
     public void clearStore() {
